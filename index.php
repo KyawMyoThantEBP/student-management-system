@@ -1,18 +1,7 @@
 <?php
-// phpinfo();
-try {
-    $pdo = new PDO("mysql:dbname=school;host=localhost", "root", "kmt");
-
-    $statement = $pdo->query("SELECT * FROM students ORDER BY id DESC");
-    $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    $result = $statement -> fetchAll();
-    
-} catch(PDOException $e){
-    die($e -> getMessage());
-} catch (Exception $e) {
-    echo $e -> getMessage();
-}
+require_once("db.php");
+$db = new DB();
+$result = $db -> index();
 
 ?>
 

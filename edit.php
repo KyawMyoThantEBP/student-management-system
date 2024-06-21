@@ -1,14 +1,7 @@
 <?php
-
-
-$pdo = new PDO("mysql:dbname=school; host=localhost", 'root', 'kmt');
-$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$statement = $pdo -> query("SELECT * FROM students WHERE id =".$_GET['id']);
-$student = $statement -> fetch(PDO::FETCH_OBJ);
-// die(var_dump($student -> gender));
-
-// var_dump($student);
+    require_once("db.php");
+    $db = new DB();
+    $student = $db -> show();
 
 ?>
 
