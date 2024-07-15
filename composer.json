@@ -1,0 +1,17 @@
+{
+    "name": "kmttech/student-managment-system",
+    "autoload": {
+        "psr-4": {
+            "Kmttech\\StudentManagmentSystem\\": "src/"
+        },
+        "files": ["helpers.php"]
+        
+    },
+    "authors": [
+        {
+            "name": "KyawMyoThantEBP",
+            "email": "kyawmyothant.connetis@gmail.com"
+        }
+    ],
+    "require": {}
+}

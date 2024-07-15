@@ -1,7 +1,16 @@
 <?php
-require_once("db.php");
+// require_once("db.php");
+// require_once("helpers.php");
+require_once("vendor/autoload.php");
+
 $db = new DB();
 $result = $db -> index();
+
+// dd(__DIR__);
+// dd($result);
+
+$hello = new Test();
+dd($hello -> hello());
 
 ?>
 

@@ -1,7 +1,7 @@
 <?php
     require_once("db.php");
     $db = new DB();
-    $student = $db -> show();
+    $student = $db -> show($_GET["id"]);
 
 ?>
 
