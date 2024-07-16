@@ -1,17 +1,21 @@
 <?php
-// require_once("db.php");
-// require_once("helpers.php");
-require_once("vendor/autoload.php");
+    require_once("vendor/autoload.php");
 
-$db = new DB();
-$result = $db -> index();
 
-// dd(__DIR__);
-// dd($result);
+    use Ultis\DB;
+    use Ultis\Message;
+    use App\ToDoList;
 
-$hello = new Test();
-dd($hello -> hello());
+    $todolist = new ToDoList();
 
+    die(var_dump($todolist -> task()));
+
+
+    $db = new DB();
+    $result = $db -> index();
+
+    $message = new Message();
+    die(var_dump($message -> announce()));
 ?>
 
 <!DOCTYPE html>

@@ -1,5 +1,6 @@
 <?php
-    require_once("db.php");
+    require_once("vendor/autoload.php");
+    use Ultis\DB;
     $db = new DB();
     $student = $db -> show($_GET["id"]);
 

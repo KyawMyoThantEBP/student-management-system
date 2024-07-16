@@ -2,9 +2,12 @@
     "name": "kmttech/student-managment-system",
     "autoload": {
         "psr-4": {
-            "Kmttech\\StudentManagmentSystem\\": "src/"
+            "Kmttech\\StudentManagmentSystem\\": "src/",
+            "App\\": "src/App/",
+            "Ultis\\": "src/Ultis/"
         },
-        "files": ["helpers.php"]
+        "files": ["helpers.php"],
+        "classmap": ["src/Ultis/", "src/App/"]
         
     },
     "authors": [
