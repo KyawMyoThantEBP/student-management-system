@@ -1,5 +1,6 @@
 <?php
     require_once("vendor/autoload.php");
-    $db = new DB();
+    use App\Ultis\Database;
+    $db = new Database();
     $student = $db -> delete($_GET["id"]);
 ?>

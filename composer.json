@@ -3,11 +3,9 @@
     "autoload": {
         "psr-4": {
             "Kmttech\\StudentManagmentSystem\\": "src/",
-            "App\\": "src/App/",
-            "Ultis\\": "src/Ultis/"
+            "App\\": "src/"
         },
-        "files": ["helpers.php"],
-        "classmap": ["src/Ultis/", "src/App/"]
+        "files": ["helpers.php"]
         
     },
     "authors": [
@@ -16,5 +14,7 @@
             "email": "kyawmyothant.connetis@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "illuminate/database": "^11.15"
+    }
 }

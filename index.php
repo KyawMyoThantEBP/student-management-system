@@ -2,20 +2,12 @@
     require_once("vendor/autoload.php");
 
 
-    use Ultis\DB;
-    use Ultis\Message;
-    use App\ToDoList;
-
-    $todolist = new ToDoList();
-
-    die(var_dump($todolist -> task()));
+    use App\Ultis\Database;
 
 
-    $db = new DB();
+    $db = new Database();
     $result = $db -> index();
 
-    $message = new Message();
-    die(var_dump($message -> announce()));
 ?>
 
 <!DOCTYPE html>
@@ -39,11 +31,11 @@
                     <div class="card mb-3" style="width: 18rem;">
                         <img class="card-img-top" src="https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg=" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $value['name']; ?></h5>
-                            <p class="card-text"><?php echo $value['email']; ?></p>
-                            <p class="card-text"><span>dob:</span><?php  echo $value['dob']; ?></p>
-                            <p class="card-text"><span>Age:</span><?php echo $value['age']; ?></p>
-                            <a href="details.php?id=<?php echo $value['id']; ?>" class="btn btn-primary">view Profile</a>
+                            <h5 class="card-title"><?php echo $value -> name; ?></h5>
+                            <p class="card-text"><?php echo $value-> email; ?></p>
+                            <p class="card-text"><span>dob:</span><?php  echo $value->dob; ?></p>
+                            <p class="card-text"><span>Age:</span><?php echo $value->age; ?></p>
+                            <a href="details.php?id=<?php echo $value->id; ?>" class="btn btn-primary">view Profile</a>
                         </div>
                     </div>
                 </div>
