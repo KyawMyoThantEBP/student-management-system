@@ -4,4 +4,3 @@
     $db = new Database();
     $student = $db -> update($_POST);
 ?>
-
