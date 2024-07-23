@@ -4,9 +4,7 @@
         "psr-4": {
             "Kmttech\\StudentManagmentSystem\\": "src/",
             "App\\": "src/"
-        },
-        "files": ["helpers.php"]
-        
+        }
     },
     "authors": [
         {
@@ -15,6 +13,8 @@
         }
     ],
     "require": {
-        "illuminate/database": "^11.15"
+        "illuminate/database": "^11.15",
+        "symfony/http-foundation": "^7.1",
+        "symfony/var-dumper": "^7.1"
     }
 }

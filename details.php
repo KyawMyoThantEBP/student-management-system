@@ -1,9 +1,14 @@
 <?php
     require_once("vendor/autoload.php");
     use App\Ultis\Database;
+    use Symfony\Component\HttpFoundation\Request;
+    
+    $request = Request::createFromGlobals();
     $db = new Database();
-    $student = $db -> show($_GET["id"]);
+    // $student = $db -> show($_GET["id"]);
     // dd($student);
+    // dd($request);    
+    $student = $db->show($request->query->get('id'));
 
 ?>
 
